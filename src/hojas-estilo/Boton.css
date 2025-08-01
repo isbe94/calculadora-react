@@ -1,0 +1,32 @@
+/* Botón base */
+.boton-contenedor {
+  height: 83px;
+  flex: 1 1;
+  margin: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 34px;
+  background-color: #3f3f66;
+  color: white;
+  border-radius: 20px;
+  border: 2px solid #ffffff22;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.boton-contenedor:hover {
+  filter: brightness(1.2);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Botones de operación */
+.operador {
+  background-color: #665cf0;
+}
+
+.operador:hover {
+  filter: brightness(1.2);
+}
