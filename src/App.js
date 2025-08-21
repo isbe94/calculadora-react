@@ -11,24 +11,29 @@ function App() {
   const [input, setInput] = useState('');
 
   const agregarInput = val => {
-
     setInput(input + val);
-
   };
 
   const calcular = () => {
-
+    // Solo se ejecuta si hay algo en el input para evitar errores
     if (input) {
+      try {
+        // Calcula el resultado usando mathjs
+        let resultado = evaluate(input);
 
-      setInput(evaluate(input));
-    }
-    else {
+        if (typeof resultado === 'number' && !Number.isInteger(resultado)) {
+          resultado = parseFloat(resultado.toFixed(5));
+        }
 
+        setInput(resultado.toString());
+
+      } catch (error) {
+        alert('La expresión matemática no es válida.');
+        setInput('');
+      }
+    } else {
       alert('Por favor ingrese valores para realizar cálculos.');
-
     }
-
-
   };
 
   return (
