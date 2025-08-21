@@ -4,17 +4,20 @@
 .App {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  /* Alinea al inicio (arriba) */
   justify-content: center;
   background-color: #1b1b32;
-  padding: 16px; /* Añade espacio en los bordes para móviles */
-  box-sizing: border-box; /* Asegura que el padding no incremente el tamaño total */
+  padding: 40px 16px 16px 16px;
+  /* Añade 50px de espacio superior */
+  box-sizing: border-box;
 }
 
 /* Contenedor del título y la calculadora */
 .contenedor-principal {
   width: 100%;
-  max-width: 450px; /* Ancho máximo para la calculadora, se ajustará hacia abajo */
+  max-width: 450px;
+  /* Ancho máximo para la calculadora, se ajustará hacia abajo */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,7 +26,8 @@
 
 .titulo {
   color: #b7b7be;
-  font-size: 2.2rem; /* Tamaño de fuente relativo */
+  font-size: 2.2rem;
+  /* Tamaño de fuente relativo */
   font-family: Roboto, sans-serif;
   text-align: center;
   margin: 0;
@@ -31,7 +35,8 @@
 
 /* Contenedor principal de la calculadora */
 .contendor-calculadora {
-  width: 100%; /* Ocupa el 100% de su contenedor padre (.contenedor-principal) */
+  width: 100%;
+  /* Ocupa el 100% de su contenedor padre (.contenedor-principal) */
   padding: 20px;
   background-color: #2c2c4a;
   border-radius: 25px;
@@ -39,14 +44,16 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Espacio entre la pantalla y la primera fila de botones */
+  gap: 10px;
+  /* Espacio entre la pantalla y la primera fila de botones */
   box-sizing: border-box;
 }
 
 /* --- Media Query para dispositivos móviles --- */
 @media screen and (max-width: 480px) {
   .titulo {
-    font-size: 1.8rem; /* Título más pequeño en móviles */
+    font-size: 1.8rem;
+    /* Título más pequeño en móviles */
   }
 
   .contendor-calculadora {
