@@ -1,22 +1,32 @@
-/* Botón de "clear" */
+/* BotonClear.css */
+
 .boton-clear {
   height: 80px;
-  font-size: 1.6em;
+  font-size: 1.8rem;
   display: flex;
-  flex: 1;
+  flex: 1; /* Ocupa todo el espacio disponible en su fila */
   background-color: #d32f2f;
-  margin-top: 8px;
   justify-content: center;
   align-items: center;
   font-weight: bold;
   color: white;
   border: 2px solid #ffffff22;
   cursor: pointer;
-  border-radius: 45px;
+  border-radius: 20px; /* Consistente con los otros botones */
   user-select: none;
   transition: all 0.2s ease;
+  margin-top: 8px; /* Mantenemos un pequeño margen superior si es necesario */
 }
 
 .boton-clear:hover {
   filter: brightness(1.2);
+}
+
+/* --- Media Query para dispositivos móviles --- */
+@media screen and (max-width: 480px) {
+  .boton-clear {
+    height: 70px; /* Misma altura que los otros botones en móvil */
+    font-size: 1.5rem;
+    border-radius: 15px; /* Mismo borde que los otros botones en móvil */
+  }
 }

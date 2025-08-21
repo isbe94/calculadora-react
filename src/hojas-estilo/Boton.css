@@ -1,13 +1,22 @@
+/* Boton.css */
+
+/* Fila de botones */
+.fila {
+  margin: 0;
+  display: flex;
+  gap: 10px; /* Espacio uniforme entre botones */
+}
+
 /* Botón base */
 .boton-contenedor {
-  height: 83px;
-  flex: 1 1;
-  margin: 4px;
+  height: 80px;
+  /* flex: 1; hará que todos los botones de la fila ocupen el mismo ancho */
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-size: 34px;
+  font-size: 2rem;
   background-color: #3f3f66;
   color: white;
   border-radius: 20px;
@@ -27,6 +36,11 @@
   background-color: #665cf0;
 }
 
-.operador:hover {
-  filter: brightness(1.2);
+/* --- Media Query para dispositivos móviles --- */
+@media screen and (max-width: 480px) {
+  .boton-contenedor {
+    height: 70px; /* Botones más pequeños */
+    font-size: 1.6rem; /* Texto de los botones más pequeño */
+    border-radius: 15px;
+  }
 }

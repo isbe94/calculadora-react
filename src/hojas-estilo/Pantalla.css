@@ -1,15 +1,26 @@
+/* Pantalla.css */
+
 .input {
-    height: 100%;
-    border-radius: 20px;
-    margin-bottom: 18px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-weight: bold;
-    font-size: 30px;
-    background-color: #0a0a23;
-    color: white;
-    padding: 11px 30px 11px 11px;
-    padding-right: 30px;
-    box-shadow: -1px 4px 1px 1px white;
+  height: 75px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2.5rem; /* Tamaño de fuente relativo para adaptarse */
+  background-color: #0a0a23;
+  color: white;
+  padding: 11px 25px 11px 11px;
+  box-shadow: -1px 4px 1px 1px white;
+  overflow-x: auto; /* Permite scroll si el número es muy largo */
+  white-space: nowrap; /* Evita que el número se parta en varias líneas */
+}
+
+/* --- Media Query para dispositivos móviles --- */
+@media screen and (max-width: 480px) {
+  .input {
+    font-size: 2rem; /* Fuente más pequeña en la pantalla */
+    height: 65px;
+  }
 }
