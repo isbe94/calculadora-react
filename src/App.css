@@ -51,6 +51,17 @@
 
 /* --- Media Query para dispositivos móviles --- */
 @media screen and (max-width: 480px) {
+
+  .App {
+    padding-top: 25px;
+    /* Reduce el padding superior en móviles */
+  }
+
+  .contenedor-principal {
+    gap: 20px;
+    /* Reduce el gap entre título y calculadora */
+  }
+
   .titulo {
     font-size: 1.8rem;
     /* Título más pequeño en móviles */
